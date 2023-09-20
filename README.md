@@ -1,4 +1,5 @@
 ***Interactive-Visualization***
+
 This project was to help the global superstore examine and understand their financial performance and also make informed decisions about the future of the business.
 
 _Functionality_
