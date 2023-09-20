@@ -1,0 +1,667 @@
+{
+    "id": "",
+    "children": [
+        {
+            "id": "China",
+            "children": [
+                {
+                    "id": "Beijing",
+                    "children": [
+                        {
+                            "id": "Beijing","Sales": 5738 
+                        }
+                    ]
+                        
+                },
+                {
+                    "id": "Gansu",
+                    "children": [
+                    {
+                          "id":"Suzhou","Sales":5725
+                    }
+                    ]
+                },
+                {
+                    "id":"Zhejiang",
+                    "children":[
+                        {
+                            "id":"Shaoxing","Sales":5211
+                        }
+                    ]
+                },
+                {
+                    "id": "Jiangsu",
+                    "children":[
+                        {
+                            "id":"Wuxi", "Sales":5049
+                        },
+                        {
+                            "id":"Gaoyou", "Sales":3671
+                        }
+                    ]
+                },
+                {
+                    "id": "Heilongjiang",
+                    "children":[
+                        {
+                            "id":"Mudanjiang","Sales":3702
+                        },
+                        {
+                            "id":"Jixi","Sales":3392
+                        }
+                    ]
+                },
+                {
+                    "id": "Liaoning",
+                    "children":[
+                        {
+                            "id":"Shenyang", "Sales":3417
+                        }
+                    ]
+                },
+                {
+                    "id":"Shandong",
+                    "children":[
+                        {
+                            "id":"Jinan", "Sales":3298
+                        }
+                    ]
+                },
+                {
+                    "id":"Shanghai",
+                    "children":[
+                        {
+                            "id":"Shanghai", "Sales":3272
+                        }
+                    ]
+                }
+            ]
+
+        },
+        {
+            "id": "USA",
+            "children":[
+                {
+                    "id":"Florida",
+                    "children":[
+                        {
+                            "id":"Jacksonville", "Sales": 22638
+                        }
+                    ]
+                },
+                {
+                    "id": "Indiana",
+                    "children":[
+                        {
+                            "id": "Lafayette","Sales":17500
+                        }
+                    ]
+                },
+                {
+                    "id": "Washington",
+                    "children":[
+                        {
+                            "id": "Seattle","Sales": 14000
+                        }
+                    ]
+                },
+                {
+                    "id":"New York",
+                    "children":[
+                        {
+                            "id":"New York City", "Sales":11200
+                        }
+                    ]
+                },
+                {
+                    "id":"Delaware",
+                    "children":[
+                        {
+                            "id": "Newark","Sales":10500
+                        }
+                    ]
+                },
+                {
+                    "id":"Michigan",
+                    "children":[
+                        {
+                            "id": "Detroit", "Sales":9893
+                        }
+                    ]
+                },
+                {
+                    "id": "Minnesota",
+                    "children":[
+                        {
+                            "id":"Minneapolis","Sales":9450
+                        }
+                    ]
+                },
+                {
+                    "id": "New Jersey",
+                    "children":[
+                        {
+                            "id":"Lakewood","Sales":9100
+                        }
+                    ]
+                },
+                {
+                    "id":"Virginia",
+                    "children":[
+                        {
+                            "id":"Arlington","Sales":8750
+                        }
+                    ]
+                },
+                {
+                    "id":"Pennsylvania",
+                    "children":[
+                        {
+                            "id":"Philadelphia","Sales":8400
+                        }
+                    ]
+                }
+            ]
+       },
+       {
+        "id": "Indonesia",
+        "children":[
+            {
+                "id":"Jawa Barat",
+                "children":[
+                    {
+                        "id":"Bandung","Sales": 4242
+                    },
+                    {
+                        "id":"Tasikmalaya", "Sales":3638
+                    }
+                ]
+            },
+            {
+                "id": "Sulawesi Tenggara",
+                "children":[
+                    {
+                        "id": "Kendari", "Sales":4136
+                    }
+                ]
+            },
+            {
+                "id": "Sulawesi Tengah",
+                "children":[
+                    {
+                        "id": "Palu", "Sales": 3707
+                    }
+                ]
+            },
+            {
+                "id":"Kalimantan Timur",
+                "children":[
+                    {
+                        "id":"Samarinda", "Sales":3696
+                    }
+                ]
+            },
+            {
+                "id":"Yogyakarta",
+                "children":[
+                    {
+                        "id": "Yogyakarta","Sales":3502
+                    }
+                ]
+            },
+            {
+                "id":"Sumatera Selatan",
+                "children":[
+                    {
+                        "id": "Palembang","Sales":3427
+                    }
+                ]
+            },
+            {
+                "id": "Jawa Timur",
+                "children":[
+                    {
+                        "id":"Surabaya","Sales":3309
+                    }
+                ]
+            },
+            {
+                "id": "Sumatera Selatan",
+                "children":[
+                    {
+                        "id":"Palembang", "Sales":3279
+                    }
+                ]
+            },
+            {
+                "id":"Nusa T Barat",
+                "children":[
+                    {
+                        "id":"Mataram","Sales":3201
+                    }
+                ]
+            }
+        ]  
+       },
+       {
+        "id": "India",
+        "children":[
+            {
+                "id":"Bihar",
+                "children":[
+                    {
+                        "id":"Muzaffarpur","Sales": 5451
+                    },
+                    {
+                        "id":"Aurangabad", "Sales":4001
+                    }
+                ]
+            },
+            {
+                "id": "Chhattisgarh",
+                "children":[
+                    {
+                        "id": "Kota", "Sales":5752
+                    }
+                ]
+            },
+            {
+                "id": "Kerala",
+                "children":[
+                    {
+                        "id": "Thiruvanantha", "Sales": 5668
+                    }
+                ]
+            },
+            {
+                "id":"Haryana",
+                "children":[
+                    {
+                        "id":"Gorakhpur", "Sales":4519
+                    },
+                    {
+                        "id":"Gorakhpur","Sales":3622
+                    }
+                ]
+            },
+            {
+                "id":"West Bengal",
+                "children":[
+                    {
+                        "id": "Kulti","Sales":4499
+                    }
+                ]
+            },
+            {
+                "id":"Manipur",
+                "children":[
+                    {
+                        "id": "Imphal","Sales":4299
+                    }
+                ]
+            },
+            {
+                "id": "Jharkhand",
+                "children":[
+                    {
+                        "id":"Jamshedpur","Sales":3916
+                    }
+                ]
+            },
+            {
+                "id": "Delhi",
+                "children":[
+                    {
+                        "id":"Delhi","Sales":3547
+                    }
+                ]
+            }
+        ]    
+    },
+    {
+        "id": "Germany",
+        "children":[
+            {
+                "id":"Rhine-Westphalia",
+                "children":[
+                    {
+                        "id":"Bochum","Sales": 3617
+                    },
+                    {
+                        "id":"Krefeld","Sales":3220
+                    }
+                ]
+            },
+            {
+                "id": "Berlin",
+                "children":[
+                    {
+                        "id": "Berlin","Sales": 4748
+                    }
+                ]
+            },
+            {
+                "id": "Lower Saxony",
+                "children":[
+                    {
+                        "id": "Munster", "Sales": 4473
+                    }
+                ]
+            },
+            {
+                "id":"Hesse",
+                "children":[
+                    {
+                        "id":"Frankfurt","Sales":3873
+                    }
+                ]
+            },
+            {
+                "id":"Hamburg",
+                "children":[
+                    {
+                        "id": "Hamburg", "Sales":3263
+                    }
+                ]
+            },
+            {
+                "id":"Baden-Württemberg",
+                "children":[
+                    {
+                        "id": "Reutlingen", "Sales":3257
+                    }
+                ]
+            },
+            {
+                "id": "Saxony",
+                "children":[
+                    {
+                        "id":"Leipzig", "Sales":3070
+                    }
+                ]
+            }
+        ] 
+     },
+     {
+        "id": "France",
+        "children":[
+            {
+                "id":"NordPas-deCalais",
+                "children":[
+                    {
+                        "id":"Lille", "Sales": 5729
+                    }
+                ]
+            },
+            {
+                "id": "Ile-de-France",
+                "children":[
+                    {
+                        "id": "Plaisir", "Sales": 4877
+                    },
+                    {
+                        "id":"Malakoff","Sales":3156
+                    },
+                    {
+                        "id": "Vincennes", "Sales": 3151
+                    }
+                ]
+            },
+            {
+                "id": "Provence",
+                "children":[
+                    {
+                        "id": "Marseille","Sales": 4618
+                    },
+                    {
+                        "id":"Nice","Sales":4449
+                    }
+                ]
+            },
+            {
+                "id":"Midi-Pyrénées",
+                "children":[
+                    {
+                        "id":"Muret","Sales":4544
+                    }
+                ]
+            },
+            {
+                "id":"Alsace",
+                "children":[
+                    {
+                        "id": "Saint-Louis", "Sales":3063
+                    }
+                ]
+            },
+            {
+                "id":"Poitou-Charentes",
+                "children":[
+                    {
+                        "id": "Poitiers", "Sales":2959
+                    }
+                ]
+            }
+        ]   
+    },
+    {
+        "id": "Brazil",
+        "children":[
+            {
+                "id":"Maranhão",
+                "children":[
+                    {
+                        "id":"Paço do Lumiar", "Sales": 3408
+                    }
+                ]
+            },
+            {
+                "id": "Federal District",
+                "children":[
+                    {
+                        "id": "Brasília", "Sales": 3393
+                    }
+                ]
+            },
+            {
+                "id": "São Paulo",
+                "children":[
+                    {
+                        "id": "São Paulo","Sales": 2616
+                    },
+                    {
+                        "id":"Ibiúna", "Sales":2333
+                    },
+                    {
+                        "id":"Salto","Sales": 2298
+                    }
+                ]
+            },
+            {
+                "id":"Minas Gerais",
+                "children":[
+                    {
+                        "id":"Uberaba","Sales":3045
+                    }
+                ]
+            },
+            {
+                "id":"Tocantins",
+                "children":[
+                    {
+                        "id": "Araguaína","Sales":2751
+                    }
+                ]
+            },
+            {
+                "id":"Paraíba",
+                "children":[
+                    {
+                        "id": "Bayeux","Sales":2461
+                    }
+                ]
+            },
+            {
+                "id":"Pernambuco",
+                "children":[
+                    {
+                        "id":"Gravatá","Sales":2461
+                    }
+                ]
+            },
+            {
+                "id":"Parana",
+                "children":[
+                    {
+                        "id":"Toledo", "Sales": 2222
+                    }
+                ]
+            }
+        ]  
+    },
+    {
+        "id": "Australia",
+        "children":[
+            {
+                "id":"South Australia",
+                "children":[
+                    {
+                        "id":"Adelaide", "Sales": 5760
+                    }
+                ]
+            },
+            {
+                "id": "New South Wales",
+                "children":[
+                    {
+                        "id": "Sydney", "Sales": 5487
+                    },
+                    {
+                        "id":"Albury","Sales":3811
+                    }
+                ]
+            },
+            {
+                "id": "Queensland",
+                "children":[
+                    {
+                        "id": "Brisbane","Sales": 5175
+                    },
+                    {
+                        "id":"Townsville", "Sales":4624
+                    },
+                    {
+                        "id":"Gold Coast","Sales": 3739
+                    }
+                ]
+            },
+            {
+                "id":"Tasmania",
+                "children":[
+                    {
+                        "id":"Launceston","Sales":4864
+                    }
+                ]
+            },
+            {
+                "id":"Western Australia",
+                "children":[
+                    {
+                        "id": "Geraldton","Sales":4192
+                    },
+                    {
+                        "id": "Kwinana","Sales": 4100
+                    }
+                ]
+            }
+        ]  
+    },
+    {
+        "id": "UK",
+        "children":[
+            {
+                "id":"Scotland",
+                "children":[
+                    {
+                        "id":"Edinburgh","Sales": 5274
+                    }
+                ]
+            },
+            {
+                "id": "England",
+                "children":[
+                    {
+                        "id": "Huddersfield","Sales": 5785
+                    },
+                    {
+                        "id":"Luton", "Sales":5725
+                    },
+                    {
+                        "id":"Stockton-on-Tees","Sales": 5451
+                    },
+                    {
+                        "id":"London","Sales": 5277
+                    },
+                    {
+                        "id":"Harrogate","Sales": 4453
+                    },
+                    {
+                        "id": "Bradford","Sales": 4363
+                    },
+                    {
+                        "id": "Stockton-on-Tees","Sales": 4141
+                    },
+                    {
+                        "id": "West Bromwich","Sales": 3979
+                    }
+                ]
+            }
+        ]   
+    },
+    {
+        "id": "Mexico",
+        "children":[
+            {
+                "id":"Distrito Federal",
+                "children":[
+                    {
+                        "id":"Mexico City","Sales": 3474
+                    }
+                ]
+            },
+            {
+                "id": "Nuevo León",
+                "children":[
+                    {
+                        "id": "Apodaca","Sales": 3445
+                    }
+                ]
+            },
+            {
+                "id": "México",
+                "children":[
+                    {
+                        "id": "Metepec","Sales": 3046
+                    }
+                ]
+            },
+            {
+                "id":"Veracruz",
+                "children":[
+                    {
+                        "id":"Rica de Hidalgo","Sales":3029
+                    }
+                ]
+            },
+            {
+                "id":"Puebla",
+                "children":[
+                    {
+                        "id": "Puebla","Sales": 2969
+                    }
+                ]
+            }
+        ]   
+    }
+  ]
+}

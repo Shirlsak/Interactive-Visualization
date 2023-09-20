@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Interactive Visualisation Group X - Team Member Y</title>
+    <script src="https://d3js.org/d3.v7.min.js" charset="utf-8"></script>
+    <div id="chart-container"></div>
+</head>
+
+<body>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #student-details {
+            border: 1px solid black;
+            padding: 3px;
+            background-color: #B2DF8A;
+        }
+    </style>
+
+    <nav><a href="/Product-Template">Back</a></nav>
+
+    <section id="student-details">
+
+        <p>SHIRLEY AKUA KONNOR, B1889318</p>
+
+    </section>
+
+    <section id="graph-4">
+
+        <h>    SUNBURST CHART SHOWING SALES BY TOP 10 COUNTRIES, STATE AND CITY   </h>
+    </section>
+
+    <script>
+        // Data for the sunburst chart
+        d3.json("sunburst.json").then(
+        function(data) {
+
+        // Setting up dimensions for the chart
+        const width = 900;
+        const height = 820;
+        const radius = Math.min(width, height)/ 3;
+        const innerRadius = radius -100;
+        const padding = 1;
+        const margin = 1;
+        const marginTop = margin;
+        const marginRight = margin;
+        const marginBottom = margin;
+        const marginLeft = margin;
+
+        // Creating an svg element for the chart
+        const svg = d3.select("body").append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .append("g")
+            .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+        // Creating a colour for the chart
+        const color = d3.scaleOrdinal(d3.schemePaired);
+        function assignParentColor(d){
+            if (d.depth === 0){
+                return "#FFFFFF";
+            } else if (d.depth === 1){
+                return color(d.data.id);
+            } else {
+                return assignParentColor(d.parent);
+            }
+        }
+
+        // Creating a new partition layout
+        function renderChart() {
+        const partition = d3.partition()
+            .size([2* Math.PI, radius]);
+
+        // Creating the root node
+        const root = d3.hierarchy(data)
+            .sum(function (d) { return d.Sales; })
+            .sort(function (a, b) { return b.value - a.value; });
+
+        partition(root)
+
+        // Creating an arc for each node in the layout
+        const arc = d3.arc()
+            .startAngle(function (d) { return d.x0; })
+            .endAngle(function (d) { return  d.x1; })
+            .padAngle(function (d){ return d => Math.min((d.x1 - d.x0)/2, 2* padding/ radius)})
+            .padRadius(radius/2)
+            .innerRadius(function (d) { return d.y0; })
+            .outerRadius(function (d) { return d.y1 - padding });
+
+
+
+        // Creating a path element for each node in the layout and set its fill color
+        const path = svg.selectAll("path")
+                .data(partition(root).descendants())
+                .enter().append("path")
+                .attr("d", arc)
+                .style("fill", function (d) { return assignParentColor(d); })
+                .style("opacity", 1)
+                .style("stroke", "#fff")
+                .style("stroke width", "0.5px")
+        
+  
+         //Adding labels to each arc
+        const text = svg.selectAll("text")
+                .data(root.descendants())
+                .enter().append("text")
+                .attr("transform", function (d) {
+                    const x = (d.x0 + d.x1) / 2 * 180 / Math.PI;
+                    const y = (d.y0 + d.y1) / 2;
+                    return `rotate (${x - 90}) translate(${y}, 0) rotate(${x < 180 ? 0 : 180})`;
+                })
+                .attr("dy", "0.35em") // vertical-align
+                .attr("text-anchor", "middle")
+                .text(function (d) { return d.data.id; })
+                .attr("style", "max-width:100%; height: auto ; height: intrinsic;")
+                .attr("font-size", 10)
+
+        // creating interactivity
+        svg.selectAll("path")
+                        .on("click", function onClick(event, d) {
+                if (!d.children) return;
+                console.log(d);
+                const newRoot = d;
+
+                const paths = svg.selectAll("path")
+                    .data(partition(newRoot).descendants());
+
+                const texts = svg.selectAll("text")
+                    .data(newRoot.descendants());
+
+                paths.exit().remove();
+                texts.exit().remove();
+
+                paths.enter().append("path")
+                    .merge(paths)
+                    .attr("d", arc)
+                    .style("fill", function (d) { return assignParentColor(d); })
+                    .style("opacity", 1)
+                    .style("stroke", "#fff")
+                    .style("stroke-width", "0.5px")
+                    .on("click", function (event, d) {
+                        if (d.parent) {
+                            onClick(event, d.parent);
+                        }
+                        event.stopPropagation();
+                    });
+                texts.enter().append("text")
+                .merge(texts)
+                .attr("transform", function (d) {
+                    const x = (d.x0 + d.x1) / 2 * 180 / Math.PI;
+                    const y = (d.y0 + d.y1) / 2;
+                    return `rotate(${x - 90}) translate(${y}, 0) rotate(${x < 180 ? 0 : 180})`;
+                })
+                .attr("dy", "0.35em") // vertical-align
+                .attr("text-anchor", "middle")
+                .text(function (d) { return d.data.id; })
+                .attr("style", "max-width:100%; height: auto ; height: intrinsic;")
+                .attr("font-size", 10)
+
+                event.stopPropagation();
+});
+
+
+            //creating a tooltip to display the sales values of  cities
+              const tooltip = d3.select("body")
+                .append("div")
+                .attr("class", "tooltip")
+                .style("opacity", 0)
+                .style("left", "0") 
+                .style("top", "0"); 
+
+            path.on("mouseover", function (event, d) {
+                d3.select(this)
+                    .style("opacity", 0.7);
+
+                if (!d.children){
+                    tooltip.html(`<strong>${d.data.id}</strong><br>Sales: ${d.data.Sales}`)
+                    .style("opacity", 1)
+                    .style("left", `${event.pageX + 10}px`) 
+                    .style("top", `${event.pageY - 10}px`); 
+                }  
+            })
+                .on("mouseout", function (d) {
+                    d3.select(this)
+                        .style("opacity", 1);
+
+                    tooltip.style("opacity", 0);
+                });
+
+    }
+
+                renderChart();
+            });
+        
+    
+    </script>
+</body>
+
+</html>
